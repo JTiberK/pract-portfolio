@@ -1,0 +1,288 @@
+/* Estilos cabecera */
+header {
+  background-color: rgb(30, 30, 30);
+  text-align: center;
+  padding: 20px;
+}
+
+#titulo {
+  font-family: "Georgia", serif;
+  color: white;
+}
+
+.fas.fa-star {
+  color: white;
+  margin-right: 8px;
+  /* Agregamos un espacio de 8px entre el Icono y los Enlaces*/
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: purple;
+}
+
+nav ul li i {
+  margin-right: 5px;
+}
+
+/* Estilos para las tarjetas de proyectos */
+#proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.proyecto {
+  flex: 1 1 calc(33.333% - 40px);
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .proyecto {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+
+@media (max-width: 600px) {
+  .proyecto {
+    flex: 1 1 100%;
+  }
+}
+
+.proyecto {
+  margin: 20px;
+  padding: 15px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proyecto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.proyecto:hover img {
+  opacity: 0.5;
+}
+
+.proyecto ::first-letter {
+  font-size: 24px;
+  color: red;
+}
+
+.proyecto.destacado {
+  background-color: yellow;
+}
+
+.proyecto:nth-child(3n) {
+  background-color: lightgray;
+}
+
+/* Estilos para el formulario de contacto */
+#contacto {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: darkpurple;
+}
+
+form {
+  max-width: 90%;
+  max-width: 600px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+input[type="email"] {
+  border: 2px solid green;
+}
+
+textarea:focus {
+  outline: 2px solid blue;
+}
+
+form input,
+form textarea {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+form button {
+  font-size: 1.2rem !important;
+}
+
+/* Estilos para el footer */
+footer {
+  background: url("fondo_footer.png") no-repeat center center;
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  text-decoration: underline;
+  color: red;
+}
+
+footer .subir {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer .subir:hover {
+  background-color: darkpurple;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .proyecto {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+/* Overlay for project click */
+.proyecto-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.proyecto-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.scroll-to-top::before {
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(45deg) translate(2px, 2px);
+  display: block;
+}
+
+.scroll-to-top:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-5px);
+}
+
+/* Mostrar el botón al hacer scroll */
+@media (min-width: 640px) {
+  html:not([data-scroll="0"]) .scroll-to-top {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

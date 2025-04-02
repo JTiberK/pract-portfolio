@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Mi Portafolio</title>
+</head>
+
+<body>
+    <!-- Sección 1: Cabecera Dinámica -->
+    <header>
+        <h1 id="titulo">Mi Portafolio</h1>
+        <nav>
+            <ul>
+                <li><i class="fas fa-star"></i><a href="#inicio">Inicio</a></li>
+                <li><i class="fas fa-star"></i><a href="#proyectos">Proyectos</a></li>
+                <li><i class="fas fa-star"></i><a href="#contacto">Contacto</a></li>
+                <li><i class="fas fa-star"></i><a href="#sobre-mi">Sobre Mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección 2: Tarjetas de Proyectos -->
+    <section id="proyectos">
+        <article class="proyecto">
+            <img src="images/portfolio1.jpg" alt="Proyecto 1" style="width:100%;">
+            <h2>Proyecto 1</h2>
+            <p>Descripción del proyecto 1.</p>
+        </article>
+        <article class="proyecto destacado">
+            <img src="images/portfolio2.jpg" alt="Proyecto 2" style="width:100%;">
+            <h2>Proyecto 2</h2>
+            <p>Descripción del proyecto 2.</p>
+        </article>
+        <article class="proyecto">
+            <img src="images/portfolio3.jpg" alt="Proyecto 3" style="width:100%;">
+            <h2>Proyecto 3</h2>
+            <p>Descripción del proyecto 3.</p>
+        </article>
+        <article class="proyecto">
+            <img src="images/portfolio1.jpg" alt="Proyecto 4" style="width:100%;">
+            <h2>Proyecto 4</h2>
+            <p>Descripción del proyecto 4.</p>
+        </article>
+        <article class="proyecto destacado">
+            <img src="images/portfolio2.jpg" alt="Proyecto 5" style="width:100%;">
+            <h2>Proyecto 5</h2>
+            <p>Descripción del proyecto 5.</p>
+        </article>
+        <article class="proyecto">
+            <img src="images/portfolio3.jpg" alt="Proyecto 6" style="width:100%;">
+            <h2>Proyecto 6</h2>
+            <p>Descripción del proyecto 6.</p>
+        </article>
+    </section>
+
+    <!-- Sección 3: Formulario de Contacto Responsivo -->
+    <section id="contacto">
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo" class="input-verde" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Sección 4: Footer con Efectos -->
+    <footer>
+        <div class="mensaje-secreto" style="display: none;">¡Este es un mensaje secreto!</div>
+        <p>© 2023 Mi Portafolio. Todos los derechos reservados.</p>
+        <a href="#top" class="scroll-to-top">Subir</a>
+    </footer>
+
+</body>
+
+</html>
