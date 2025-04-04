@@ -1,5 +1,11 @@
 # **Portafolio Estático con Amazon S3 y CloudFront**
 
+<p align="Center">
+
+<img src="/images/portfolio1.jpg" width="300px">
+   
+</p>
+
 Este repositorio contiene el código fuente de un sitio web estático diseñado para ser desplegado en **Amazon S3** y distribuido mediante **Amazon CloudFront**. A continuación, se describe resumidamente el propósito del proyecto y cómo funciona CloudFront.
 
 ---
